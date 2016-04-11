@@ -39,13 +39,13 @@ build. In the best case scenario this will look something like this,
 
 ```scala
 lazy val commonSettings = Seq(
-	// ...
+  // ...
 
-	resolvers += "scalatl" at "https://milessabin.com/scalatl",
-	//scalaVersion := "2.11.8",
-	scalaVersion := "2.11.8-tl",
+  resolvers += "scalatl" at "http://milessabin.com/scalatl",
+  //scalaVersion := "2.11.8",
+  scalaVersion := "2.11.8-tl",
 
-	// ...
+  // ...
 )
 ```
 
