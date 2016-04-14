@@ -38,7 +38,7 @@ with the example from [the ticket][si2712]. Things to play with are anything whi
 to use a Cats/Scalaz `Unapply` or `U` suffixed method. Or anything where the arity of the type constructor being
 inferred is lower than the arity of the outer type constructor of the concrete type being unified with.
 
-# How to trail this fix with your project
+# How to trial this fix with your project
 
 To use this build of the Scala compiler with your own project you should first ensure that it builds correctly with
 Scala 2.11.8, then change the Scala version to 2.11.8-tl and add the Maven repository it can be found in to your
