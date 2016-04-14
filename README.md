@@ -51,6 +51,7 @@ lazy val commonSettings = Seq(
   resolvers += "scalatl" at "http://milessabin.com/scalatl",
   //scalaVersion := "2.11.8",
   scalaVersion := "2.11.8-tl-201604131941",
+  scalaBinaryVersion := "2.11",
 
   // ...
 )
@@ -90,7 +91,7 @@ Thanks too to Alistair Johnson and Dale Wijnand for assistance with publishing t
 
 [si2712]: https://issues.scala-lang.org/browse/SI-2712
 [si2712fix]: https://github.com/milessabin/scala/blob/08587aa66c48c453a0aed99cceba26c655cabd65/src/reflect/scala/reflect/internal/Types.scala#L3085-L3124
-[catsbuild]: https://github.com/milessabin/cats/commit/d966ff6c3c5d1c66f49fab80d2a0ec2c87bee915
+[catsbuild]: https://github.com/typelevel/cats/compare/v0.4.1...milessabin:topic/si-2712
 [mail]: mailto:miles@milessabin.com
 [paul]: https://twitter.com/pchiusano
 [comment]: https://issues.scala-lang.org/browse/SI-2712?focusedCommentId=61270
