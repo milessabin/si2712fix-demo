@@ -12,6 +12,7 @@ lazy val root = (project in file(".")).
     name := "si2712fix-demo",
     scalacOptions ++= Seq(
       "-feature",
+      "-language:higherKinds",
       "-Yhigher-order-unification"
     )
   )

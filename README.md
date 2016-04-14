@@ -24,6 +24,13 @@ easily made optional, I believe it is very low risk. I believe that the benefits
 your reports of successes (especially of gnarly workaround code that can be eliminated) will be hugely important in
 making the case for this appearing in a Scala compiler release sooner rather than later.
 
+# Latest news
+
+The implementation I originally published had the limitation that it could only abstract over first order type
+parameters and not higher-kinded type parameters. This limitation has been removed in the current build.
+
+The feature is now hidden behind a new Scala compiler flag: add `-Yhigher-order-unification` to enable it.
+
 # Experimenting with this repo
 
 This project contains a minimal `build.sbt` configured to use the modified compiler. It contains a single source file
@@ -43,7 +50,7 @@ lazy val commonSettings = Seq(
 
   resolvers += "scalatl" at "http://milessabin.com/scalatl",
   //scalaVersion := "2.11.8",
-  scalaVersion := "2.11.8-tl",
+  scalaVersion := "2.11.8-tl-201604131941",
 
   // ...
 )
@@ -82,7 +89,7 @@ experience is dramatically improved.
 Thanks too to Alistair Johnson and Dale Wijnand for assistance with publishing the compiler binaries.
 
 [si2712]: https://issues.scala-lang.org/browse/SI-2712
-[si2712fix]: https://github.com/milessabin/scala/commit/d91fda48ba0a2754beaeb0b719bed75b3dcce38e
+[si2712fix]: https://github.com/milessabin/scala/blob/08587aa66c48c453a0aed99cceba26c655cabd65/src/reflect/scala/reflect/internal/Types.scala#L3085-L3124
 [catsbuild]: https://github.com/milessabin/cats/commit/d966ff6c3c5d1c66f49fab80d2a0ec2c87bee915
 [mail]: mailto:miles@milessabin.com
 [paul]: https://twitter.com/pchiusano
