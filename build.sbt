@@ -3,7 +3,7 @@ lazy val commonSettings = Seq(
   version := "0.1.0",
   resolvers += "scalatl" at "http://milessabin.com/scalatl",
   //scalaVersion := "2.11.8" // compile will fail
-  scalaVersion := "2.11.8-tl" // compile succeeds
+  scalaVersion := "2.11.8-tl-201604131941" // compile succeeds
 )
 
 lazy val root = (project in file(".")).
@@ -11,6 +11,7 @@ lazy val root = (project in file(".")).
   settings(
     name := "si2712fix-demo",
     scalacOptions ++= Seq(
-      "-feature"
+      "-feature",
+      "-Yhigher-order-unification"
     )
   )
