@@ -3,7 +3,7 @@ package si2712fix
 object Demo1a {
   def meh[M[_], A](x: M[A]): M[A] = x
 
-  meh((x: Int) => x) // solvex ?M = [X](Int => X) and ?A = Int ...
+  meh((x: Int) => x) // solves ?M = [X](Int => X) and ?A = Int ...
 }
 
 object Demo1b {
