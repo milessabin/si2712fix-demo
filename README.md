@@ -31,6 +31,9 @@ parameters and not higher-kinded type parameters. This limitation has been remov
 
 The feature is now hidden behind a new Scala compiler flag: add `-Yhigher-order-unification` to enable it.
 
+There is now an annotation which allows type parameters to be captured and solved in the opposite, right to left
+direction. In particular this supports left-biased data types such as Scalactic's `Or`. See the example [here][or].
+
 # Experimenting with this repo
 
 This project contains a minimal `build.sbt` configured to use the modified compiler. It contains a single source file
@@ -50,7 +53,7 @@ lazy val commonSettings = Seq(
 
   resolvers += "scalatl" at "http://milessabin.com/scalatl",
   //scalaVersion := "2.11.8",
-  scalaVersion := "2.11.8-tl-201604151108",
+  scalaVersion := "2.11.8-tl-201604181208",
   scalaBinaryVersion := "2.11",
 
   // ...
@@ -95,3 +98,4 @@ Thanks too to Alistair Johnson and Dale Wijnand for assistance with publishing t
 [mail]: mailto:miles@milessabin.com
 [paul]: https://twitter.com/pchiusano
 [comment]: https://issues.scala-lang.org/browse/SI-2712?focusedCommentId=61270
+[or]: https://github.com/milessabin/si2712fix-demo/blob/master/src/main/scala/si2712fix/demo3.scala
