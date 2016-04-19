@@ -53,7 +53,7 @@ lazy val commonSettings = Seq(
 
   resolvers += "scalatl" at "http://milessabin.com/scalatl",
   //scalaVersion := "2.11.8",
-  scalaVersion := "2.11.8-tl-201604181208",
+  scalaVersion := "2.11.8-tl-201604190743",
   scalaBinaryVersion := "2.11",
 
   // ...
