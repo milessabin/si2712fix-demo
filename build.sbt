@@ -1,10 +1,10 @@
+
 lazy val commonSettings = Seq(
   organization := "org.typelevel",
   version := "0.1.0",
   resolvers += "scalatl" at "http://milessabin.com/scalatl",
-  //scalaVersion := "2.11.8" // compile will fail
-  scalaVersion := "2.11.8-tl-201604190743", // compile succeeds
-  scalaBinaryVersion := "2.11"
+  scalaVersion := "2.11.8", 
+  addCompilerPlugin("com.milessabin" % "si2712fix-plugin" % "1.0.0-SNAPSHOT" cross CrossVersion.full) //without plugin compile will fail 
 )
 
 lazy val root = (project in file(".")).
@@ -13,7 +13,7 @@ lazy val root = (project in file(".")).
     name := "si2712fix-demo",
     scalacOptions ++= Seq(
       "-feature",
-      "-language:higherKinds",
-      "-Yhigher-order-unification"
-    )
+      "-language:higherKinds"
+    ),
+    libraryDependencies += "com.milessabin" % "si2712fix-library" % "1.0.0-SNAPSHOT" cross CrossVersion.full
   )
