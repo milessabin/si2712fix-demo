@@ -8,11 +8,11 @@ latter PR.
 
 # Experimenting with this repo
 
-This project contains a minimal `build.sbt` configured to use Typelevel Scala. It includes the with the example from
-[the ticket][si2712] and several other examples which would not have compiled prior to the fix. Things to play with
-are anything which you would normally expect to have to use a Cats/Scalaz `Unapply` or `U` suffixed method, or
-anything where the arity of the type constructor being inferred is lower than the arity of the outer type constructor
-of the concrete type being unified with.
+This project contains a minimal `build.sbt` configured to use Typelevel Scala.  It includes the example from [the
+ticket][si2712] and several other examples which would not have compiled prior to the fix. Things to play with are
+anything which you would normally expect to have to use a Cats/Scalaz `Unapply` or `U` suffixed method, or anything
+where the arity of the type constructor being inferred is lower than the arity of the outer type constructor of the
+concrete type being unified with.
 
 # How to trial this fix with your project
 
